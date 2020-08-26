@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter 3 นาที: SingleChildScrollView'),
+      home: MyHomePage(title: 'Flutter 3 นาที: InteractiveViewer'),
     );
   }
 }
@@ -36,8 +36,12 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: Column(
           children: [
-            Container(
-              child: Image(image: AssetImage('assets/cat.jpg')),
+            InteractiveViewer(
+              maxScale: 10,
+              minScale: 1,
+              child: Image(
+                image: AssetImage('assets/cat.jpg'),
+              ),
             ),
             Expanded(
               child: Padding(
