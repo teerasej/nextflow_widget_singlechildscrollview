@@ -37,12 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: ClipRect(
-        child: InteractiveViewer(
-          maxScale: 20,
-          child: Image.asset('assets/cat.jpg'),
-        ),
-      ),
+      body: Image.asset('assets/cat.jpg'),
     );
   }
 }
